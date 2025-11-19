@@ -21,9 +21,9 @@
     <div class="main">
         <div class="col-md-6 col-sm-12">
             <div class="login-form">
-                <form>
+                <form action="" method="post">
                     <div class="form-group">
-                        <label>Nombre y Aoellido</label>
+                        <label>Nombre y Apellido</label>
                         <input type="text" class="form-control" placeholder="Juan Perez" id="nomap" name="nomap">
                     </div>
                     <div class="form-group">
