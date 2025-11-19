@@ -13,8 +13,8 @@
 
     <div class="sidenav">
         <div class="login-main-text">
-            <h2>Application<br> Registrarse </h2>
-            <p>Login or register from here to access.</p>
+            <h2><h3>Bienvenido</h3><br> Registrarse </h2>
+            <p>formulario de registro.</p>
         </div>
     </div>
 
@@ -24,22 +24,21 @@
                 <form>
                     <div class="form-group">
                         <label>Nombre y Aoellido</label>
-                        <input type="text" class="form-control" placeholder="User Name" id="nomap" name="nomap">
+                        <input type="text" class="form-control" placeholder="Juan Perez" id="nomap" name="nomap">
                     </div>
                     <div class="form-group">
                         <label>User Name</label>
-                        <input type="text" class="form-control" placeholder="User Name" id="username" name="username">
+                        <input type="text" class="form-control" placeholder="It'ztuRealMenolEnCotiseHD" id="username" name="username">
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" placeholder="User Name" id="email" name="email">
+                        <input type="email" class="form-control" placeholder="elrealpradaboy@mail.com" id="email" name="email">
                     </div>
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" class="form-control" placeholder="Password" id="password" name="password">
                     </div>
-                        <button type="submit" class="btn btn-black">Login</button>
-                        <button type="submit" class="btn btn-secondary">Register</button>
+                        <button type="submit" class="btn btn-success mt-3">Register</button>
                 </form>
             </div>
         </div>
