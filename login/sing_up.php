@@ -1,3 +1,10 @@
+<?php
+    include "../database/conexiondb.php";
+
+    if(isset($_SESSION['verificado'])){
+        header("Location: bienvenida.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -23,8 +30,12 @@
             <div class="login-form">
                 <form action="" method="post">
                     <div class="form-group">
-                        <label>Nombre y Apellido</label>
-                        <input type="text" class="form-control" placeholder="Juan Perez" id="nomap" name="nomap">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" placeholder="Juan" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" placeholder="Perez" id="apellido" name="apellido">
                     </div>
                     <div class="form-group">
                         <label>User Name</label>
@@ -43,8 +54,23 @@
             </div>
         </div>
     </div>
+    <?php
+    if(isset($_POST['nomap']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password'])){
+    
+        $ins = $conn -> query("INSERT INTO usuarios (nombre, apellido, username, email, password) VALUES ('$_POST[nombre]', '$_POST[apellido]', '$_POST[username]', '$_POST[email]', '$_POST[password]')");
 
-      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-   </body>
+            IF ($ins){
+                HEADER("Location: bienvenida.php");
+
+                session_start();
+                $_SESSION["verificado"] = "si";
+            } else {
+                echo "Error al guardar";
+            }
+    }
+    
+    ?>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
 </html>
