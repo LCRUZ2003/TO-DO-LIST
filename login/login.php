@@ -2,7 +2,9 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
+<?php
+include_once('../database/conexiondb.php');
+?>
 <!DOCTYPE html>
 <html>
     
@@ -29,13 +31,13 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="" class="form-control input_user" value="" placeholder="username" id="usuario" name="usuario">
+							<input type="text" class="form-control input_user" value="" placeholder="username" id="usuario" name="usuario">
 						</div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="" class="form-control input_pass" value="" placeholder="password" id="pass" name="pass">
+							<input type="password" class="form-control input_pass" value="" placeholder="password" id="pass" name="pass">
 						</div>
 						<div class="form-group">
 							<div class="custom-control custom-checkbox">
@@ -44,7 +46,7 @@
 							</div>
 						</div>
 							<div class="d-flex justify-content-center mt-3 login_container">
-			                    <button type="button" name="button" class="btn login_btn">Login</button>
+			                    <button type="submit" name="button" class="btn login_btn">Login</button>
 				            </div>
 					</form>
 				</div>
